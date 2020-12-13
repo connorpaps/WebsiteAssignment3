@@ -1,0 +1,462 @@
+/*
+Name: Connor Papas
+ID: 160517199
+Date: December 12, 2020
+WEB222 Assignment 3 Website
+
+WEBSITE CHOSEN: https://www.themoviedb.org/
+
+My Website Hosted Link: https://connorpweb222a3project.netlify.app/
+*/
+
+/*movie details specific css - used to style each movies contents in the modal*/
+.menu {
+    background-color: white;
+    height: 40px;
+}
+
+.movie2 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, rgba(11.76%, 15.29%, 17.25%, 1.00) 150px,
+     rgba(19.61%, 21.96%, 23.53%, 0.84)), url(../images/movie2/backgroundimage.jpg);
+    height: 565px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#x-icon {
+    position: absolute;
+    right: 1%;
+    top: 2%;
+    font-size: 25px;
+    width: 30px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+#contents2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.singlemovie2 {
+    background: transparent;
+    padding-top: 30px; 
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1300px;
+    width: 100%;
+    z-index: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+div {
+    display: block;
+}
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    height: auto;
+}
+
+#poster2 {
+    display: block;
+    min-width: 300px;
+    width: 300px;
+    height: 450px;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.hovertext {
+    position: absolute;
+    bottom: 50%;
+    font-size: 20px;
+    display: none;
+}
+
+.hovertext #fullscreen {
+    margin-right: 10px;
+}
+
+#poster2:hover {
+    background-color: black;
+    opacity: 0.5;
+}
+
+.rent2 {
+    background-color: #032541;
+    height: 60px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.rent2 img {
+    height: 36px;
+    width: 36px;
+    border-radius: 5px;
+    align-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.rent2 h4 {
+    display: block;
+    font-weight: 400;
+    box-sizing: border-box;
+    line-height: 1em;
+    opacity: 0.8;
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+.rent2 h3 {
+    display: block;
+    font-size: 1em;
+    line-height: 1em;
+    margin: 0;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-top: -21px;
+}
+
+.rent2 a {
+    text-decoration: none;
+    color: white;
+}
+
+.movieinfo-2 {
+    padding-top: 50px;
+    padding-left: 35px;
+    margin-top: -10px;
+}
+
+.line1-2 {
+    font-size: 22px;
+    line-height: 100%;
+    margin-top: -10px;
+    margin-bottom: -15px;
+    margin-left: 5px;
+    min-height: 75px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+
+.line1-2 #year {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-weight: 400;
+}
+
+.line1-2 h2 a {
+    color:white;
+}
+
+.line1-2 a {
+    text-decoration: none;
+}
+
+.line2-2 {
+    margin-top: -45px;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.line2-2 #rating {
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.line2-2 #genres {
+    cursor: pointer;
+}
+
+.dot {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.line3-2 {
+    position: relative;
+    margin-top: 20px;
+}
+
+.line3-2 img {
+    height: 65px;
+    width: 65px;
+    margin-bottom: 10px;
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+#ratinghover:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); 
+}
+
+.line3-2 span {
+    width: 5px;
+    height: 50px;
+}
+
+.line3-2 a {
+    height: 30px;
+    width: 30px;
+    margin-left: 15px;
+}
+
+.line3-2 a img {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.line3-2 #score {
+    height: 50px;
+    width: 50px;
+    padding-left: -10px;
+    margin-bottom: 17px;
+
+}
+
+.line3-2 .icons  {
+    height: 46px;
+    width: 46px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.line3-2 a {
+    position: absolute;
+    bottom: 40%;
+    width: 120px;
+    height: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    margin-left: 25px;
+}
+
+.line3-2 #playbutton {
+    color: white;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.line3-2 a:hover {
+    opacity: 0.5;
+}
+
+.trailer {
+    margin-bottom: 7px;
+    margin-left: 5px;
+    font-weight: 600;
+
+}
+
+.line4-2 {
+    margin-top: -5px;
+    padding-right: -5px;
+    font-style: italic;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-weight: lighter;
+}
+
+.line5-2 h3 {
+    margin-bottom: -10px;
+}
+
+.line5-2 p {
+    width: 900px;
+    font-size: 1em;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-weight: 400;
+}
+
+/*roles*/
+
+.people-2 {
+    margin-top: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.people-2 li {
+    background-color: transparent;
+    height: auto;
+    margin-bottom: 15px;
+    width: 33%;
+    flex-basis: 33%;
+    text-align: left;
+    margin-right: 0;
+    box-sizing: border-box;
+    padding-right: 20px;
+    min-width: 140px;
+}
+
+.people-2 li p {
+    font-size: 1em;
+    margin: 0;
+    text-overflow: ellipsis;
+}
+
+.people-2 li p a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.people-2 .person .role  {
+    font-size: 0.9em;
+}
+
+/*Cast sectiion*/
+
+.contentwrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.castwrapper {
+    max-width: 1300px;
+    width: 100vw;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 35px;
+}
+
+.topbilled h3 {
+    font-size: 1.4em;
+    margin-top: -10px;
+    margin-bottom: -2px;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding-left: 18px;
+}
+
+.scrollbar {
+    margin: 4px, 4px; 
+    padding: 4px; 
+    width: 930px;
+    height: 292px;
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    white-space: nowrap;
+}
+
+.actors {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin-left: -10px;
+    margin-top: -10px;
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 295px;
+}
+
+.actor {
+    margin-top: 10px;
+    margin-bottom: -10px;
+    margin-left: 10px;
+    margin-right: 4px;
+    padding-bottom: 10px;
+    border: 1px solid rgba(var(--lightGrey), 1);
+    border-radius: 10px;    
+    min-width: 140px;
+    max-width: 140px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 248px;
+    width: 125px;
+}
+
+.actor p a:hover {
+    opacity: 0.8;
+}
+
+.actorimage {
+    border-radius: 8px;
+    margin-bottom: -10px;
+}
+
+.actors li > a {
+    width: 300px;
+    height: 10px;
+}
+
+
+.actor a {
+    text-decoration: none;
+    margin-top: -200px;
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.job {
+    margin-top: -15px;
+    margin-left: 10px;
+    font-size: 0.9em;
+    width: 20px;
+}
+
+.actor p {
+    margin-left: 10px;
+}
+
+.viewmore {
+    padding-right: 15px;
+    padding-left: 20px;
+    margin: auto 0;
+}
+
+.viewmore a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.viewmore a:hover {
+    color: #00bfff;
+}

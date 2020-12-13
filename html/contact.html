@@ -1,0 +1,183 @@
+<!--
+Name: Connor Papas
+ID: 160517199
+Date: December 12, 2020
+WEB222 Assignment 3 Website
+
+WEBSITE CHOSEN: https://www.themoviedb.org/
+
+My Website Hosted Link: https://connorpweb222a3project.netlify.app/
+-->
+
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+    <head>
+        <title>The Movie Database (TMDb)</title>
+        <!--links to free google fonts used in the website-->
+        <link rel="icon" href="images/favicon-mdb.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,600;0,900;1,700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="../css/contact.css">
+        <link rel="stylesheet" href="../css/headfoot.css">
+        <!--Font awesome kit code link to use font awesome icons. Change to your kit code if mine not working-->
+        <script src="https://kit.fontawesome.com/416a94f5e0.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <header>
+            <a href="../index.html"><h2>TMDB</h2></a>
+            <img src="../images/headerlogo.png" id="tmdblogo" alt="tmdblogo">
+            <ul class="leftitems">
+                <li id="left1"><a href="nowplaying.html">Movies</a></li>
+                <li id="left2"><a href="">TV Shows</a></li>
+                <li id="left3"><a href="">People</a></li>
+                <li id="left4"><a href="">More</a></li>
+            </ul>
+            <i id="plus" class="fas fa-plus"></i>
+            <img src="../images/en.jpg" id="lang" alt="enlang">
+            <ul class="rightitems">
+                <li id="right2"><a href="">Login</a></li>
+                <li id="right3"><a href="">Join TMDb</a></li>
+                <li id="right4"><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <img src="../images/searchicon.png" id="searchicon" alt="searchicon">
+        </header>
+
+        <!--Final Assessment 1.2 Contact Form-->
+        <div id="top-border">
+            <h2>Contact Us</h2>
+             <a href="../index.html">Return Home</a>
+        </div>
+        <hr/>
+        <div class="form-wrapper">
+            <div class="contactform">
+                <form action="https://httpbin.org/post" method="POST">
+                    <!--Name Field-->
+                    <label for="name">Name</label>
+                    <input type="text" required id="name" name="fullname" placeholder="Enter your name...">
+                    
+                    <!--Email Address Field-->
+                    <label for="email">Email Address</label>
+                    <input type="email" required id="email" name="emailaddress" placeholder="Enter your email address...">
+                
+                    <!--Address Field-->
+                    <label for="address">Address</label>
+                    <input type="text" required id="address" name="address" placeholder="Enter your address...">
+
+                    <!--City Field-->
+                    <label for="city">City</label>
+                    <input list="citylist" required id="city" name="city" placeholder="Choose a city...">
+                    <datalist id="citylist">
+                        <option value="Toronto">
+                        <option value="Vancouver">
+                        <option value="Montreal">
+                        <option value="Niagara Falls">
+                        <option value="Victoria">
+                        <option value="Halifax">
+                        <option value="Quebec City">
+                        <option value="Calgary">
+                        <option value="Ottawa">
+                        <option value="Edmonton">
+                    </datalist>
+                    
+                    <!--Postal Code Field-->
+                    <label for="postalcode">Postal Code</label>
+                    <input type="text" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]|
+                    [A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]" required id="postalcode" 
+                    name="postalcode" placeholder="Enter your postal code...">
+
+                    <!--Radio Options Field-->
+                    <div class="radio-buttons">
+                        <label for="radiobuttons">What can we help you with?</label><br>
+                        <!--Add an onclick attribute to call the orderClicked() function that controls the 
+                            showing and hiding of the order number field-->
+                        <input type="radio" onclick="orderClicked()" id="question" name="options" value="question">
+                        <label for="other">Question</label><br>
+
+                        <input type="radio" onclick="orderClicked()" id="comment" name="options" value="comment">
+                        <label for="other">Comment</label><br>
+
+                        <input type="radio" onclick="orderClicked()" id="problem" name="options" value="problem">
+                        <label for="other">Order Problem</label><br>
+                    </div>
+                    
+                    <!--Hidden Order Number Field-->
+                    <div class="order-problem">
+                        <label for="ordernum">Please enter your order number</label>
+                        <input type="text" id="ordernum" name="ordernumber" placeholder="Enter your order number...">
+                    </div>
+                    
+                    <!--Message Field-->
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Enter your message here..." 
+                    style = "height: 200px"></textarea>
+
+                    <!--Hidden field with my name-->
+                    <input type="hidden" id="myname" name="MyHiddenName" value="Connor Papas">
+
+                    <!--Submit Buttom-->
+                    <input type="submit" id="contactbutton" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <div id="bottom-border"></div>
+        <!--Add js script that controls contact form-->
+        <script src="../js/movie.js"></script>
+    </body>
+    <!--Footer information-->
+    <footer>
+        <div class="dbfooter">
+            <img src="../images/footer1.jpg" id="footer1" alt="movielogo">
+            <button id="button">JOIN THE COMMUNITY</button>
+
+            <div class="listinfo">
+                <ul id="basics">
+                    <li>THE BASICS</li>
+                    <li>About TMDb</li>
+                    <li>Contact Us</li>
+                    <li>Support Forums</li>
+                    <li>API</li>
+                    <li>System Status</li>
+                </ul>
+                <ul id="involved">
+                    <li>GET INVOLVED</li>
+                    <li>Contribution Bible</li>
+                    <li>3rd Party Applications</li>
+                    <li>Add New Movie</li>
+                    <li>Add New TV Show</li>
+                </ul>
+                <ul id="community">
+                    <li>COMMUNITY</li>
+                    <li>Guidelines</li>
+                    <li>Discussions</li>
+                    <li>Leaderboard</li>
+                    <a href="https://twitter.com/themoviedb"><li id="twitter">Twitter</li></a>
+                </ul>
+                <ul id="legal">
+                    <li>LEGAL</li>
+                    <li>Terms of Use</li>
+                    <li>API Terms of Use</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="emailform">
+                <form action="https://formspree.io/f/xjvpednn" method="POST">
+                <div class="forminfo">
+                    <label>
+                        Subscribe to our newsletter!<br>
+                    </label>
+                    <div class="textfield">
+                        <input type="text" name="_replyto" placeholder = "Enter your email...">
+                    <button id="emailbutton" type="submit">Subscribe</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+</html>

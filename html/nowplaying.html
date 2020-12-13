@@ -1,0 +1,491 @@
+<!--
+Name: Connor Papas
+ID: 160517199
+Date: December 12, 2020
+WEB222 Assignment 3 Website
+
+WEBSITE CHOSEN: https://www.themoviedb.org/
+
+My Website Hosted Link: https://connorpweb222a3project.netlify.app/
+-->
+
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+    <head>
+        <title>The Movie Database (TMDb)</title>
+        <!--links to free google fonts used in the website-->
+        <link rel="icon" href="images/favicon-mdb.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,600;0,900;1,700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@0;1&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="../css/nowplaying.css">
+        <link rel="stylesheet" href="../css/headfoot.css">
+        <link rel="stylesheet" href="../css/details1.css">
+        <link rel="stylesheet" href="../css/details2.css">
+        <!--Font awesome kit code link to use font awesome icons. Change to your kit code if mine is not working-->
+        <script src="https://kit.fontawesome.com/416a94f5e0.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <header>
+            <a href="../index.html"><h2>TMDB</h2></a>
+            <img src="../images/headerlogo.png" id="tmdblogo" alt="tmdblogo">
+            <ul class="leftitems">
+                <li id="left1"><a href="nowplaying.html">Movies</a></li>
+                <li id="left2"><a href="">TV Shows</a></li>
+                <li id="left3"><a href="">People</a></li>
+                <li id="left4"><a href="">More</a></li>
+            </ul>
+            <i id="plus" class="fas fa-plus"></i>
+            <img src="../images/en.jpg" id="lang" alt="enlang">
+            <ul class="rightitems">
+                <li id="right2"><a href="">Login</a></li>
+                <li id="right3"><a href="">Join TMDb</a></li>
+                <li id="right4"><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <img src="../images/searchicon.png" id="searchicon" alt="searchicon">
+        </header>
+    <!--Now Playing Header-->
+    <div id="nowplaying">
+        <h3>Now Playing Movies</h3>
+    </div>
+    <!--Information for each of the movie grids-->
+    <div class="wrapper">
+        <div class="box 1">
+            <!--note: Removed hrefs for box 1 and box 2, added new div for modals-->
+            <div class="modal-link-1">
+                <img src="../images/movie1.jpg" id="modal1a" title="The Croods: A New Age" alt="TheCroods">
+            <h2>
+                <a title="The Croods: A New Age">The Croods: A New Age</a>
+            </h2>
+            </div>
+            <p>(G) Nov 25, 2020</p>
+        </div>
+        <div class="box 2">
+            <div class="modal-link-2">
+                <img src="../images/movie5.jpg" title="Come Away" alt="Come Away">
+            <h2>
+                <a title="Come Away">Come Away</a>
+            </h2>
+            </div>
+            <p>(PG) Nov 13, 2020</p>
+        </div>
+        <div class="box 3">
+            <img src="../images/movie3.jpg" title="Freaky" alt="Freaky">
+            <h2>
+                <a href="" title="Freaky">Freaky</a>
+            </h2>
+            <p>(R) Nov 13, 2020</p>
+        </div>
+        <div class="box 4">
+            <img src="../images/movie4.jpg" title="Let Him Go" alt="LetHimGo">
+            <h2>
+                <a href="" title="Let Him Go">Let Him Go</a>
+            </h2>
+            <p>(R) Nov 06, 2020</p>
+        </div>
+        <div class="box 5">
+            <img src="../images/movie2.jpg" title="Fate/stay night: Heaven's Feel III. Spring Song" alt="Fate/stayNight">
+            <h2>
+                <a href="" title="Fate/stay night: Heaven's Feel III. Spring Song">Fate/stay night: Heaven's<span> Feel III. Spring Song</span></a>
+            </h2>
+            <p id= "fateDate">(PG) Nov 18, 2020</p>
+        </div>
+        <div class="box 6">
+            <img src="../images/movie6.jpg" title="The Last Vermeer" alt="TheLastVermeer">
+            <h2>
+                <a href="" title="The Last Vermeer">The Last Vermeer</a>
+            </h2>
+            <p>(R) Nov 20, 2020</p>
+        </div>
+        <div class="box 7">
+            <img src="../images/movie7.jpg" title="Embattled" alt="Embattled">
+            <h2>
+                <a href="" title="Embattled">Embattled</a>
+            </h2>
+            <p>(R) Nov 20, 2020</p>
+        </div>
+        <div class="box 8">
+            <img src="../images/movie8.jpg" title="63 Up" alt="63Up">
+            <h2>
+                <a href="" title="63 Up">63 Up</a>
+            </h2>
+            <p>Dec 13, 2019</p>
+        </div>
+
+        <div id="loadmore">
+            <a href="">Load More</a>
+        </div>
+      </div>
+
+    <!--Assignment 3 Modal Section-->
+    <!--Movie Details Page Specifics-->
+    <div class="modal1 hide">
+        <div class="modal-container">
+            <div class="movie1">
+                <i id="x-icon" class="fas fa-times"></i>
+                <div class="singlemovie1">
+                    <section id="contents1">
+                        <!--Contains all the information about the movie-->
+                        <div class="posterwrap1">
+                            <img src="../images/movie1/croods.jpg" id="poster" alt="TheCroodsPoster">
+                        </div>
+                        <div class="movieinfo1">
+                            <div class="line1-1">
+                                <h2>
+                                    <a href="">The Croods: A New Age</a>
+                                    <span id="year">(2020)</span>
+                                </h2>
+                            </div>
+        
+                            <div class="line2-1">
+                                <span id="rating">G</span>
+                                <span id="released">11/25/2020 (CA) </span>
+                                <span class="dot"> &#183;</span>
+                                <span id="genres">Adventure, Fantasy, Family, Animation </span>
+                                <span class="dot"> &#183;</span>
+                                <span id="runtime">1h 35m</span>
+                            </div>
+        
+                            <div class="line3-1">
+                                <img src="../images/movie1/rating.png" id="ratinghover">
+                                <img src="../images/movie1/score.png" id="score">
+                                <img src="../images/movie1/listicon.png" title="Login to create and edit custom lists" class="icons">
+                                <img src="../images/movie1/hearticon.png" title="Login to add this movie to your favorite list" class="icons">
+                                <img src="../images/movie1/flagicon.png" title="Login to add this movie to your watchlist" class="icons">
+                                <img src="../images/movie1/staricon.png" title="Login to rate this movie" class="icons">
+                                <a class="../trailer" href="">
+                                    <i class="fas fa-play" id="playbutton"></i>
+                                    Play Trailer
+                                </a>
+                            </div>
+        
+                            <div class="line4-1">
+                                <p>The future ain't what it used to be.</p>
+                            </div>
+        
+                            <dive class="line5-1">
+                                <h3>Overview</h3>
+                                <p>
+                                    After leaving their cave, the Croods encounter their biggest threat 
+                                    since leaving: another family called the Bettermans, who claim to 
+                                    be better and evolved. But after Eep and the Bettermans' only daughter 
+                                    escape, the two families must put aside their differences to save them.
+                                </p>
+                            </dive>
+        
+                            <ol class="people-1">
+                                <li class="person">
+                                    <p><a href="">Chris Sanders</a></p>
+                                    <p class="role">Characters</p>
+                                </li>
+                                <li class="person">
+                                    <p><a href="">Kirk DeMicco</a></p>
+                                    <p class="role">Characters, Story</p>
+                                </li>
+                                <li class="person">
+                                    <p><a href="">Joel Crawford</a></p>
+                                    <p class="role">Director</p>
+                                </li>
+                                <li class="person">
+                                    <p><a href="">Dan Hageman</a></p>
+                                    <p class="role">Screenplay</p>
+                                </li>
+                                <li class="person">
+                                    <p><a href="">Kevin Hageman</a></p>
+                                    <p class="role">Screenplay</p>
+                                </li>
+                                <li class="person">
+                                    <p><a href="">Bob Logan</a></p>
+                                    <p class="role">Screenplay</p>
+                                </li>
+                                <li class="person">
+                                    <p><a href="">Paul Fisher</a></p>
+                                    <p class="role">Screenplay</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!--Section that controls the actors and scrollbar-->
+            <div class="contentwrapper">
+                <div class="castwrapper">
+                    <section class="topbilled">
+                        <h3>Top Billed Cast</h3>
+        
+                        <div class="scrollbar">
+                            <ol class="actors">
+                                <li class="actor">
+                                    <!--I add <a> elements with blank links for expandability in the future-->
+                                    <a href=""><img src="../images/movie1/actor1.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Nicolas Cage</a></p>
+                                    <p class="job">Grug Crood (voice)</p>
+                                </li>
+                                <li class="actor">
+                                    <a href=""><img src="../images/movie1/actor2.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Emma Stone</a></p>
+                                    <p class="job">Eep Crood (voice)</p>
+                                </li>
+                                <li class="actor">
+                                    <a href=""><img src="../images/movie1/actor3.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Ryan Reynolds</a></p>
+                                    <p class="job">Guy (voice)</p>
+                                </li>
+                                <li class="actor">
+                                    <a href=""><img src="../images/movie1/actor4.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Peter Dinklage</a></p>
+                                    <p class="job">Phil Betterman <br>(voice)</p>
+                                </li>
+                                <li class="actor">
+                                    <a href=""><img src="../images/movie1/actor5.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Leslie Mann</a></p>
+                                    <p class="job">Hope Betterman <br>(voice)</p>
+                                </li>
+                                <li class="actor">
+                                    <a href=""><img src="../images/movie1/actor6.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Kelly Marie Tran</a></p>
+                                    <p class="job">Dawn Betterman <br>(voice)</p>
+                                </li>
+                                <li class="actor">
+                                    <a href=""><img src="../images/movie1/actor7.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Catherine Keener</a></p>
+                                    <p class="job">Ugga Crood (voice)</p>
+                                </li>
+                                <li class="actor">
+                                    <a href=""><img src="../images/movie1/actor8.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Clark Duke</a></p>
+                                    <p class="job">Thunk Crood <br>(voice)</p>
+                                </li>
+                                <li class="actor">
+                                    <a href=""><img src="../images/movie1/actor9.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Randy Thom</a></p>
+                                    <p class="job">Sandy Crood <br>(voice)</p>
+                                </li>
+                                <li class="viewmore">
+                                    <p><a href="">View More
+                                        <span><i class="fas fa-arrow-right"></i></span>
+                                    </a></p>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Movie 2 Modal-->
+    <div class="modal2 hide2">
+        <div class="modal-container">
+            <div class="movie2">
+                <i id="x-icon" class="fas fa-times"></i>
+                <div class="singlemovie2">
+                    <section id="contents2">
+                        <!--Contains all the information about the movie-->
+                        <div class="posterwrap2">
+                            <img src="../images/movie2/comeaway.jpg" id="poster2" alt="ComeAwayPoster">
+                            <div class="rent2">
+                                <img src="../images/movie2/cineplexlogo.jpg" alt="CineplexLogo">
+                                <p class="hovertext"><i class="fas fa-expand-arrows-alt" id="fullscreen"></i>Expand</p>
+                                <div class="rentinfo2">
+                                    <span>
+                                        <h4>Available to Rent or Buy</h4>
+                                        <h3><a href="" class="watch">Watch Now</a></h3>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="movieinfo-2">
+                            <div class="line1-2">
+                                <h2>
+                                    <a href="">Come Away</a>
+                                    <span id="year">(2020)</span>
+                                </h2>
+                            </div>
+        
+                            <div class="line2-2">
+                                <span id="rating">PG</span>
+                                <span id="released">11/13/2020 (US) </span>
+                                <span class="dot"> &#183;</span>
+                                <span id="genres">Fantasy, Adventure, Drama</span>
+                                <span class="dot"> &#183;</span>
+                                <span id="runtime">1h 34m</span>
+                            </div>
+    
+                            <div class="line3-2">
+                                <img src="../images/movie2/rating.png" id="ratinghover">
+                                <img src="../images/movie2/score.png" id="score">
+                                <img src="../images/movie2/listicon.png" title="Login to create and edit custom lists" class="icons">
+                                <img src="../images/movie2/hearticon.png" title="Login to add this movie to your favorite list" class="icons">
+                                <img src="../images/movie2/flagicon.png" title="Login to add this movie to your watchlist" class="icons">
+                                <img src="../images/movie2/staricon.png" title="Login to rate this movie" class="icons">
+                                <a class="trailer" href="">
+                                    <i class="fas fa-play" id="playbutton"></i>
+                                    Play Trailer
+                                </a>
+                            </div>
+    
+                            <div class="line4-2">
+                                <p>A story about courage, wonder and never growing old.</p>
+                            </div>
+    
+                            <dive class="line5-2">
+                                <h3>Overview</h3>
+                                <p>
+                                    Before Alice went to Wonderland, and before Peter became Pan, 
+                                    they were brother and sister. When their eldest brother dies 
+                                    in a tragic accident, they each seek to save their parents from 
+                                    their downward spirals of despair until finally they are forced 
+                                    to choose between home and imagination, setting the stage for 
+                                    their iconic journeys into Wonderland and Neverland.
+                                </p>
+                            </dive>
+    
+                            <ol class="people-2">
+                                <li class="person">
+                                    <p><a href="">J.M. Barrie</a></p>
+                                    <p class="role">Characters</p>
+                                </li>
+                                <li class="person">
+                                    <p><a href="">Lewis Carroll</a></p>
+                                    <p class="role">Characters</p>
+                                </li>
+                                <li class="person">
+                                    <p><a href="">Brenda Chapman</a></p>
+                                    <p class="role">Director</p>
+                                </li>
+                                <li class="person">
+                                    <p><a href="">Marissa Kate Goodhill</a></p>
+                                    <p class="role">Screenplay</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!--Section that controls the actors and scrollbar-->
+            <div class="contentwrapper">
+                <div class="castwrapper">
+                    <section class="topbilled">
+                        <h3>Top Billed Cast</h3>
+    
+                        <div class="scrollbar">
+                            <ol class="actors">
+                                <li class="actor">
+                                    <!--I add <a> elements with blank links for expandability in the future-->
+                                    <a href=""><img src="../images/movie2/actor1.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Angelina Jolie</a></p>
+                                    <p class="job">Rose Littleton</p>
+                                </li>
+                                <li class="actor">
+                                    <a href=""><img src="../images/movie2/actor2.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">David Oyelowo</a></p>
+                                    <p class="job">Jack</p>
+                                </li>
+                                <li class="actor">
+                                    <a href=""><img src="../images/movie2/actor3.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Jordan A. Nash</a></p>
+                                    <p class="job">Peter</p>
+                                </li>
+                                <li class="actor">
+                                    <a href=""><img src="../images/movie2/actor4.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Keira Chansa</a></p>
+                                    <p class="job">Alice</p>
+                                </li>
+                                <li class="actor">
+                                    <a href=""><img src="../images/movie2/actor5.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Michael Caine</a></p>
+                                    <p class="job">Charlie</p>
+                                </li>
+                                <li class="actor">
+                                    <a href=""><img src="../images/movie2/actor6.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Gugu Mbatha-<br>Raw</a></p>
+                                    <p class="job">Adult Alice</p>
+                                </li>
+                                <li class="actor">
+                                    <a href=""><img src="../images/movie2/actor7.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Derek Jacobi</a></p>
+                                    <p class="job">Mr. Brown</p>
+                                </li>
+                                <li class="actor">
+                                    <a href=""><img src="../images/movie2/actor8.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Anna Chancellor</a></p>
+                                    <p class="job">Eleanor Morrow</p>
+                                </li>
+                                <li class="actor">
+                                    <a href=""><img src="../images/movie2/actor9.jpg" class="actorimage" alt="Nicolas Cage"></a>
+                                    <p><a href="">Clarke Peters</a></p>
+                                    <p class="job">Mad Hatter</p>
+                                </li>
+                                <li class="viewmore">
+                                    <p><a href="">View More
+                                        <span><i class="fas fa-arrow-right"></i></span>
+                                    </a></p>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                    </section>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <script src="../js/modal.js"></script>
+    </body> 
+    <!--Footer information-->
+    <footer>
+        <div class="dbfooter">
+            <img src="../images/footer1.jpg" id="footer1" alt="movielogo">
+            <button id="button">JOIN THE COMMUNITY</button>
+
+            <div class="listinfo">
+                <ul id="basics">
+                    <li>THE BASICS</li>
+                    <li>About TMDb</li>
+                    <li>Contact Us</li>
+                    <li>Support Forums</li>
+                    <li>API</li>
+                    <li>System Status</li>
+                </ul>
+                <ul id="involved">
+                    <li>GET INVOLVED</li>
+                    <li>Contribution Bible</li>
+                    <li>3rd Party Applications</li>
+                    <li>Add New Movie</li>
+                    <li>Add New TV Show</li>
+                </ul>
+                <ul id="community">
+                    <li>COMMUNITY</li>
+                    <li>Guidelines</li>
+                    <li>Discussions</li>
+                    <li>Leaderboard</li>
+                    <a href="https://twitter.com/themoviedb"><li id="twitter">Twitter</li></a>
+                </ul>
+                <ul id="legal">
+                    <li>LEGAL</li>
+                    <li>Terms of Use</li>
+                    <li>API Terms of Use</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="emailform">
+                <form action="https://formspree.io/f/xjvpednn" method="POST">
+                <div class="forminfo">
+                    <label>
+                        Subscribe to our newsletter!<br>
+                    </label>
+                    <div class="textfield">
+                        <input type="text" name="_replyto" placeholder = "Enter your email...">
+                    <button id="emailbutton" type="submit">Subscribe</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        
+    </footer>
+</html>

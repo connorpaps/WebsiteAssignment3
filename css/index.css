@@ -1,0 +1,209 @@
+/*
+Name: Connor Papas
+ID: 160517199
+Date: December 12, 2020
+WEB222 Assignment 3 Website
+
+WEBSITE CHOSEN: https://www.themoviedb.org/
+
+My Website Hosted Link: https://connorpweb222a3project.netlify.app/
+*/
+
+/*Assignment 3 carousel arrow css*/
+#leftarrow {
+    font-size: 40px;
+    position: absolute;
+    left: -4.5%;
+    top: 52%;
+    cursor: pointer;
+}
+
+#leftarrow:hover, #rightarrow:hover {
+    opacity: 0.8;
+}
+
+#rightarrow {
+    font-size: 40px;
+    position: absolute;
+    left: 92%;
+    top: 52%;
+    cursor: pointer;
+}
+
+/*Welcome Hero Section*/
+
+.welcomeimage {
+    display:flex;
+    position: relative;
+    max-width: 1400px;
+    min-height: 300px;
+    height: 360px;
+    margin: 0 auto;
+}
+
+.banner #heroimage {
+    height: 360px;
+    width: 100%;
+}
+
+.welcomecontent {
+    text-align: left;
+    position: absolute;
+    top: 39%;
+    left: 55%;
+    color:white;
+    transform: translate(-50%, -50%);
+    width:100%;
+}
+
+.welcomecontent h2 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.welcomecontent p {
+    font-size: 32px;
+    font-weight: 600px;
+    margin-top: -47px;
+    font-style: normal;
+    margin-right: 12%;
+}
+
+.searchbar {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.searchtext {
+    width: 100%;
+    border: none;
+    padding: 5px;
+    padding-left: 20px;
+    height: 36px;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    color: #9DBFAF;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 46px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.searchbutton {
+    margin-left: -5%;
+    width: 100px;
+    height: 47px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 9;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.searchbutton:hover {
+    color:black;
+}
+
+.search {
+    width: 90%;
+    position: absolute;
+    top: 115%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+/*History of Our Hotel Section*/
+
+.jointoday {
+    display:flex;
+    background-image: url(../images/people.jpg);
+     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    max-width: 1400px;
+    min-height: 300px;
+    height: 325px;
+    margin: 0 auto;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.jointoday h3 {
+    font-size: 32px;
+    text-align: left;
+    position: absolute;
+    top: 7%;
+    left: 54%;
+    color:white;
+    transform: translate(-50%, -50%);
+    width:100%;
+}
+
+.jointoday p {
+    font-size: 19px;
+    text-align: left;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    color:white;
+    transform: translate(-50%, -50%);
+    width:52%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+.jointoday ul {
+    font-size: 16px;
+    text-align: left;
+    position: absolute;
+    top: 43%;
+    left: 75%;
+    color:white;
+    transform: translate(-50%, -50%);
+    width:50%;
+    overflow: hidden;
+    display: inline-block;
+    max-width: 400px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+.info #signup {
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 215px;
+    margin-left: 60px;
+    position: absolute;
+    color: white;
+    background-color: #805be7;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 6px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 221px 221px;
+        color: #444;
+        padding: 10px;
+        grid-gap: 20px;
+        justify-content: center;
+        padding-bottom: 35px;
+    }
+}

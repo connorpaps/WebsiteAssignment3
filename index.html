@@ -1,0 +1,158 @@
+<!--
+Name: Connor Papas
+ID: 160517199
+Date: December 12, 2020
+WEB222 Assignment 3 Website
+
+WEBSITE CHOSEN: https://www.themoviedb.org/
+
+My Website Hosted Link: https://connorpweb222a3project.netlify.app/
+-->
+
+<!--
+Changelog and upgrades since Assignment 2 Submisson
+- Added subscribe form to all footers
+- Added contact us button in header that links to new contact us page
+- created folders to group up html, css, and js files better, previously they were all together
+- combined header and footer css code into one file so its not repeated in every css file, this 
+  makes it easier to make changes to the whole websites header/footer through one css file
+- renamed my home page from home.html to index.html and placed it in the root
+- Cleaned up some css and grouped things together better
+- Added image carousel to hero banner on home page
+- Added modals to the first two movies on now playing page, now popup details
+-->
+
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+    <head>
+        <title>The Movie Database (TMDb)</title>
+        <!--links to free google fonts used in the website-->
+        <link rel="icon" href="images/favicon-mdb.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,600;0,900;1,700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/headfoot.css">
+        <!--Font awesome kit code link to use font awesome icons. Change to your kit code if mine not working-->
+        <script src="https://kit.fontawesome.com/416a94f5e0.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <header>
+            <a href="index.html"><h2>TMDB</h2></a>
+            <img src="images/headerlogo.png" id="tmdblogo" alt="tmdblogo">
+            <ul class="leftitems">
+                <li id="left1"><a href="html/nowplaying.html">Movies</a></li>
+                <li id="left2"><a href="">TV Shows</a></li>
+                <li id="left3"><a href="">People</a></li>
+                <li id="left4"><a href="">More</a></li>
+            </ul>
+            <i id="plus" class="fas fa-plus"></i>
+            <img src="images/en.jpg" id="lang" alt="enlang">
+            <ul class="rightitems">
+                <li id="right2"><a href="">Login</a></li>
+                <li id="right3"><a href="">Join TMDb</a></li>
+                <li id="right4"><a href="html/contact.html">Contact Us</a></li>
+            </ul>
+            <img src="images/searchicon.png" id="searchicon" alt="searchicon">
+        </header>
+
+    <div class="hero-body">
+        <!--First hero section-->
+        <div class="welcomeimage">
+            <!--The automatic carousel javasript will rotate the image in the banner class div-->
+            <div class="banner">
+                <img src="images/heroimage1.jpg" id="heroimage" alt="hero banner">
+            </div>
+            <!--Hero content-->
+            <div class="welcomecontent">
+                <i class="fas fa-arrow-left" id="leftarrow"></i>
+                <i class="fas fa-arrow-right" id="rightarrow"></i>
+                <h2>Welcome.</h2>
+                <p>Millions of movies, TV shows and people to discover. Explore now.</p>
+                <div class="search">
+                    <div class="searchbar">
+                        <input type="text" class = "searchtext" placeholder="Search for a movie, tv show, person......">
+                        <button type="submit" class="searchbutton">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Second hero section-->
+        <div class="jointoday">
+            <div class="info">
+                <h3>Join Today</h2>
+                <p>Get access to maintain your own <span class="italic">custom personal lists,
+                    track what you've seen</span> and search and filter for <span class="italic">what to
+                    watch next</span>—regardless if it's in theatres, on TV or 
+                    available on popular streaming services like Netflix, 
+                    Amazon Prime Video, and hayu.</p>
+                    <a href="" id="signup">Sign Up</a>
+                <ul>
+                    <li>Enjoy TMDb ad free</li>
+                    <li>Maintain a personal watchlist</li>
+                    <li>Filter by your subscribed streaming services and find something to watch</li>
+                    <li>Log the movies and TV shows you've seen</li>
+                    <li>Build custom lists</li>
+                    <li>Contribute to and improve our database</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="js/movie.js"></script>
+    </body>
+    <!--Footer information-->
+    <footer>
+        <div class="dbfooter">
+            <img src="images/footer1.jpg" id="footer1" alt="movielogo">
+            <button id="button">JOIN THE COMMUNITY</button>
+
+            <div class="listinfo">
+                <ul id="basics">
+                    <li>THE BASICS</li>
+                    <li>About TMDb</li>
+                    <li>Contact Us</li>
+                    <li>Support Forums</li>
+                    <li>API</li>
+                    <li>System Status</li>
+                </ul>
+                <ul id="involved">
+                    <li>GET INVOLVED</li>
+                    <li>Contribution Bible</li>
+                    <li>3rd Party Applications</li>
+                    <li>Add New Movie</li>
+                    <li>Add New TV Show</li>
+                </ul>
+                <ul id="community">
+                    <li>COMMUNITY</li>
+                    <li>Guidelines</li>
+                    <li>Discussions</li>
+                    <li>Leaderboard</li>
+                    <a href="https://twitter.com/themoviedb"><li id="twitter">Twitter</li></a>
+                </ul>
+                <ul id="legal">
+                    <li>LEGAL</li>
+                    <li>Terms of Use</li>
+                    <li>API Terms of Use</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="emailform">
+                <form action="https://formspree.io/f/xjvpednn" method="POST">
+                <div class="forminfo">
+                    <label>
+                        Subscribe to our newsletter!<br>
+                    </label>
+                    <div class="textfield">
+                        <input type="text" name="_replyto" placeholder = "Enter your email...">
+                    <button id="emailbutton" type="submit">Subscribe</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+</html>

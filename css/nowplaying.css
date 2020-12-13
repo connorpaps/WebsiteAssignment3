@@ -1,0 +1,179 @@
+/*
+Name: Connor Papas
+ID: 160517199
+Date: December 12, 2020
+WEB222 Assignment 3 Website
+
+WEBSITE CHOSEN: https://www.themoviedb.org/
+
+My Website Hosted Link: https://connorpweb222a3project.netlify.app/
+*/
+
+
+/* Assignment 3 Modal CSS*/
+
+/*First movie modal*/
+.modal1 {
+    position:absolute;
+    top:5%;
+    left:0;
+    height:116vh;
+    width:100%;
+    z-index:1;
+    margin-top: 20px;
+    background-color: rgba(158, 158, 158,0.3);
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.modal-container {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    width:70%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    padding:40px 32px;
+}
+
+.hide {
+    display: none;
+}
+
+/*Second movie modal*/
+
+.modal2 {
+    position:absolute;
+    top:5%;
+    left:0;
+    height:116vh;
+    width:100%;
+    z-index:1;
+    margin-top: 20px;
+    background-color: rgba(158, 158, 158,0.3);
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.hide2 {
+    display: none;
+}
+
+.modal-container2 {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    width:70%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    padding:40px 32px;
+}
+
+/*now playing section*/
+
+#nowplaying {
+    font-size: 24px;
+    color: black;
+    margin-top: -5px;
+    margin-bottom: -25px;
+    left: 25%;
+    width: 400px;
+    position: relative;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+#loadmore {
+    font-size: 1.5em;
+    background-color: #01b4e4;
+    width: 945px;
+    height: 50px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#loadmore a {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    top: 14%;
+    color: white;
+}
+
+#loadmore a:hover {
+    color: black;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 221px 221px 221px 221px;
+    color: #444;
+    padding: 10px;
+    grid-gap: 20px;
+    justify-content: center;
+    padding-bottom: 35px;
+}
+
+.wrapper img {
+    min-width: 220px;
+    min-height: 330px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+ 
+.box {
+    background-color: white;
+    border: 1px solid #e3e3e3;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box h2 a {
+    cursor: pointer;
+}
+
+.wrapper h2 {
+    margin-top: 3px;
+}
+
+.wrapper a span {
+    display: block;
+    padding-left: 8px;
+}
+
+.wrapper h2 a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    text-align: left;
+    padding-left: 8px;
+    line-height: 12px;
+}
+
+.wrapper p {
+    color:rgba(0, 0, 0, 0.6);
+    font-size: 15px;
+    padding-left: 8px;
+    text-align: left;
+    margin-top: -25px;
+    margin-bottom: 30px;
+}
+
+#fateDate {
+    padding-top: 8px;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 221px 221px;
+        color: #444;
+        padding: 10px;
+        grid-gap: 20px;
+        justify-content: center;
+        padding-bottom: 35px;
+    }
+}
